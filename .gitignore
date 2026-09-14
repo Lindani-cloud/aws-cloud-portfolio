@@ -1,0 +1,14 @@
+# AWS credentials and local configuration
+.env
+.aws/
+*.pem
+*.key
+
+# Generated deployment files
+deployment-output.txt
+cloudfront-output.json
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
