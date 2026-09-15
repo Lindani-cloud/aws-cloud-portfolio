@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical AWS cloud engineering portfolio.">
+  <title>CloudLaunch | Cloud Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">CloudLaunch</a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#architecture">Architecture</a></nav>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AWS Cloud Portfolio</p>
+        <h1>Building reliable systems from data to cloud.</h1>
+        <p class="lead">An aspiring cloud and data engineer building practical AWS, data, and backend engineering skills through projects.</p>
+        <div class="actions"><a class="button primary" href="#projects">View projects</a><a class="button secondary" href="https://github.com/Lindani-cloud">GitHub profile</a></div>
+      </div>
+      <aside class="status-card" aria-label="Project deployment status">
+        <span class="status"><span class="dot"></span> Deployment ready</span>
+        <dl><div><dt>Hosting</dt><dd>Amazon S3</dd></div><div><dt>Delivery</dt><dd>CloudFront</dd></div><div><dt>Region</dt><dd>af-south-1</dd></div></dl>
+      </aside>
+    </section>
+    <section id="about" class="section"><p class="eyebrow">About</p><h2>Learning by building</h2><p>This portfolio demonstrates foundational cloud concepts: object storage, content delivery, least-privilege access, cost awareness, and infrastructure documentation.</p></section>
+    <section id="projects" class="section">
+      <p class="eyebrow">Featured work</p><h2>Projects</h2>
+      <div class="grid">
+        <article class="card"><span class="tag">AWS</span><h3>CloudLaunch</h3><p>A secure static portfolio designed for private S3 storage and global delivery through CloudFront.</p><a href="https://github.com/Lindani-cloud/aws-cloud-portfolio">View repository →</a></article>
+        <article class="card"><span class="tag">Data Engineering</span><h3>RandFlow ETL</h3><p>A small pipeline that extracts exchange-rate data and prepares it for reliable downstream use.</p><a href="https://github.com/Lindani-cloud/randflow-etl">View repository →</a></article>
+        <article class="card"><span class="tag">Backend</span><h3>Robot Worlds</h3><p>Software engineering practice focused on application logic, APIs, and maintainable code.</p><a href="https://github.com/Lindani-cloud?tab=repositories">Explore repositories →</a></article>
+      </div>
+    </section>
+    <section id="architecture" class="section architecture">
+      <div><p class="eyebrow">Architecture</p><h2>Simple, secure, and cost-aware</h2></div>
+      <ol><li><strong>Store</strong><span>Static files in a private, versioned S3 bucket.</span></li><li><strong>Protect</strong><span>Block public access and use CloudFront Origin Access Control.</span></li><li><strong>Deliver</strong><span>Serve content globally over HTTPS with CloudFront.</span></li><li><strong>Monitor</strong><span>Use an AWS Budget alert to keep spending visible.</span></li></ol>
+    </section>
+  </main>
+  <footer><p>Built as an AWS cloud engineering project.</p><p id="year"></p></footer>
+</body>
+</html>
