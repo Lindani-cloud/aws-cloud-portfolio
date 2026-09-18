@@ -1,0 +1,39 @@
+name: Cloud portfolio checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install CloudFormation linter
+        run: pip install cfn-lint
+
+      - name: Validate CloudFormation template
+        run: cfn-lint infrastructure/cloudformation.yaml
+
+      - name: Check required website assets
+        run: |
+          test -s site/index.html
+          test -s site/error.html
+          test -s site/styles.css
+          test -s site/script.js
+
+      - name: Check deployment script syntax
+        run: bash -n deploy/deploy.sh
